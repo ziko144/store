@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -15,26 +16,26 @@
             font-family: "Poppins", sans-serif;
         }
 
-        :root{
+        :root {
             --bg-color: #ffffff;
             --text-color: #000000;
             --main-color: #f0f0f0;
             --other-color: #ffc633;
             --second-color: #616060;
 
-            --h1-font: 4.5rem;
+            --h1-font: 3.5rem;
             --h2-font: 3.5rem;
             --p-font: 1rem;
         }
 
-        body{
-            background: url(Enhancing-the-Shopping-Experience-img1.webp);
+        body {
+            background: var(--bg-color);
             color: var(--text-color);
             background-position: center;
             background-size: cover;
         }
 
-        header{
+        header {
             position: fixed;
             top: 0;
             right: 0;
@@ -50,11 +51,11 @@
 
         }
 
-        .navlist{
+        .navlist {
             display: flex;
         }
 
-        .navlist a{
+        .navlist a {
             display: inline-block;
             margin: 0 30px;
             font-size: var(--p-font);
@@ -63,34 +64,36 @@
             transition: all .6s;
         }
 
-        .navlist a:hover{
+        .navlist a:hover {
             transform: translateY(-4px);
             color: var(--second-color);
         }
 
-        .logo{
+        .logo {
             font-size: 33px;
             font-weight: 800;
             text-transform: uppercase;
             color: var(--text-color);
         }
 
-        .nav-right{
+        .nav-right {
             display: flex;
             align-items: center;
         }
 
-        .nav-right a{
+        .nav-right a {
             display: inline-block;
             font-size: 22px;
             color: var(--text-color);
             margin: 0 20px;
             transition: all .6s;
         }
-        .nav-right a:hover{
+
+        .nav-right a:hover {
             transform: translateY(-5px) scale(1.1);
         }
-        #menu-icon{
+
+        #menu-icon {
             font-size: 35px;
             color: var(--text-color);
             z-index: 10001;
@@ -98,11 +101,13 @@
             cursor: pointer;
             display: none;
         }
-        section{
+
+        section {
             padding: 90px 14% 70px;
         }
-        .home{
-            position: relative;
+
+        .home {
+            position: absolute;
             height: 100vh;
             width: 100%;
             background: url();
@@ -112,22 +117,29 @@
             align-items: center;
             justify-content: flex-start;
         }
-        .home-text{
+
+        .photo {
+            background: url();
+
+            width: 50%;
+        }
+
+        .home-text {
             padding-top: 60px;
         }
 
-        .home-text h1{
+        .home-text h1 {
             font-size: var(--h1-font);
             font-weight: 300;
             line-height: 1.1;
             margin-bottom: 20px;
-            color: orange;
+            color: var(--text-color);
         }
 
-        .home-text h6{
+        .home-text h6 {
             font-size: 15px;
             font-weight: 500;
-            color: white;
+            color: black;
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 10px;
@@ -138,40 +150,83 @@
             max-width: 560px;
             font-size: var(--p-font);
             font-weight: 400;
-            color: orange;
+            color: var(--text-color);
             line-height: 33px;
             margin-bottom: 35px;
         }
-        .btn{
+
+        .btn {
             display: inline-block;
             padding: 19px, 50px;
-            color: var(--text-color);
-            background-color: white;
+            color: var(--bg-color);
+            background-color: black;
             border-radius: 50px;
             font-size: 16px;
             font-weight: 400;
             border: 2px solid transparent;
             transition: all .6s;
-            
+
         }
 
-        .btn:hover{
+        btn i {
+            margin-left: 9px;
+        }
+
+        .btn:hover {
             transform: scale(0.9) translateY(-6px);
-            border: 2px solid cyan;
+            border: 2px solid white;
+        }
+
+        .brands {
+            padding: 10px 5%;
+            background: var(--text-color);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+
+        }
+
+        ::selection {
+            background-color: black;
+            color: white;
+        }
+
+        .main-brands {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .brands-c img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 600px) {
+
+            /* Ekran büyük olduğunda yapılacak stil değişiklikleri */
+            .navlist {
+                display: flex;
+            }
+
+            .nav-right {
+                display: none;
+            }
         }
     </style>
-      <link rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-      <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica&family=Oswald&family=Poppins:ital,wght@0,600;1,500&family=Rajdhani:wght@600&family=Rubik+Puddles&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geologica&family=Oswald&family=Poppins:ital,wght@0,600;1,500&family=Rajdhani:wght@600&family=Rubik+Puddles&family=Source+Code+Pro:wght@600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <header>
@@ -197,6 +252,7 @@
         <div class="home-text">
             <h6>New Arrivals</h6>
             <h1>New Arrivals <br> ready to rock</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, dignissimos.</p>
 
             <a href="#" class="btn">
                 Shop now
@@ -204,7 +260,37 @@
             </a>
         </div>
 
+
+
     </section>
+
+    <div class="brands">
+        <div class="main-brands">
+            <div class="brands-c">
+                <img src="zara.png" alt="">
+            </div>
+            <div class="brands-c">
+                <img src="versace.png" alt="">
+            </div>
+            <div class="brands-c">
+                <img src="gucci.png" alt="">
+            </div>
+            <div class="brands-c">
+                <img src="calvin-klein.png" alt="">
+            </div>
+            <div class="brands-c">
+                <img src="nike.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
